@@ -1,0 +1,224 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Demon Slayer Tanjiro Hoodie",
+      "price": 49.99,
+      "image": "/assets/Tanjiro.webp",
+      "description": "Premium quality hoodie featuring Tanjiro's iconic design from Demon Slayer.",
+      "category": "Hoodies",
+      "inStock": true,
+      "sizes": ["S", "M", "L", "XL"],
+      "anime": "Demon Slayer"
+    },
+    {
+      "id": 2,
+      "name": "Attack on Titan Survey Corps Jacket",
+      "price": 79.99,
+      "image": "/assets/AOT.webp",
+      "description": "Authentic replica of the Survey Corps jacket from Attack on Titan.",
+      "category": "Clothes",
+      "inStock": true,
+      "sizes": ["M", "L", "XL"],
+      "anime": "Attack on Titan"
+    },
+    {
+      "id": 3,
+      "name": "Gojo Satoru Figure - Jujutsu Kaisen",
+      "price": 129.99,
+      "image": "/assets/jjk-gojo.webp",
+      "description": "High-quality PVC figure of Gojo Satoru from Jujutsu Kaisen, approximately 25cm tall.",
+      "category": "Figures",
+      "inStock": true,
+      "dimensions": "25cm x 15cm x 15cm",
+      "anime": "Jujutsu Kaisen"
+    },
+    {
+      "id": 4,
+      "name": "My Hero Academia All Might T-Shirt",
+      "price": 29.99,
+      "image": "/assets/all-might.webp",
+      "description": "Cotton t-shirt featuring All Might's iconic pose.",
+      "category": "Clothes",
+      "inStock": true,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "anime": "My Hero Academia"
+    },
+    {
+      "id": 5,
+      "name": "One Piece Luffy Action Figure",
+      "price": 89.99,
+      "image": "/assets/one-piece.webp",
+      "description": "Detailed action figure of Monkey D. Luffy in Gear 5 form.",
+      "category": "Figures",
+      "inStock": true,
+      "dimensions": "20cm x 12cm x 12cm",
+      "anime": "One Piece"
+    },
+    {
+      "id": 6,
+      "name": "Naruto Akatsuki Cloak",
+      "price": 69.99,
+      "image": "/assets/Akatsuki.webp",
+      "description": "High-quality replica of the Akatsuki organization cloak.",
+      "category": "Clothes",
+      "inStock": true,
+      "sizes": ["S", "M", "L", "XL"],
+      "anime": "Naruto"
+    },
+    {
+      "id": 7,
+      "name": "Dragon Ball Z Goku Hoodie",
+      "price": 54.99,
+      "image": "/assets/Goku.webp",
+      "description": "Comfortable hoodie featuring Goku's Super Saiyan design.",
+      "category": "Hoodies",
+      "inStock": true,
+      "sizes": ["M", "L", "XL"],
+      "anime": "Dragon Ball Z"
+    },
+    {
+      "id": 8,
+      "name": "Chainsaw Man Pochita Plush Figure",
+      "price": 34.99,
+      "image": "/assets/chainsawman.webp",
+      "description": "Soft and cuddly Pochita plush figure.",
+      "category": "Figures",
+      "inStock": true,
+      "dimensions": "30cm x 20cm x 20cm",
+      "anime": "Chainsaw Man"
+    },
+    {
+      "id": 9,
+      "name": "Spy x Family Anya Forger Figure",
+      "price": 45.99,
+      "image": "/assets/anya-figure.jpg",
+      "description": "Adorable figure of Anya Forger from Spy x Family.",
+      "category": "Figures",
+      "inStock": true,
+      "dimensions": "15cm x 10cm x 10cm",
+      "anime": "Spy x Family"
+    },
+    {
+      "id": 10,
+      "name": "Death Note L T-Shirt",
+      "price": 27.99,
+      "image": "/assets/l-tshirt.webp",
+      "description": "Minimalist T-shirt featuring L's iconic initial.",
+      "category": "Clothes",
+      "inStock": true,
+      "sizes": ["S", "M", "L", "XL"],
+      "anime": "Death Note"
+    },
+    {
+      "id": 11,
+      "name": "Fullmetal Alchemist Edward Elric Pocket Watch",
+      "price": 39.99,
+      "image": "/assets/fma-watch.jpg",
+      "description": "Replica of Edward Elric's State Alchemist pocket watch.",
+      "category": "Accessories",
+      "inStock": false,
+      "dimensions": "Diameter: 4.7cm",
+      "anime": "Fullmetal Alchemist"
+    },
+    {
+      "id": 12,
+      "name": "Hunter x Hunter Gon Freecss T-Shirt",
+      "price": 28.99,
+      "image": "/assets/gon-tshirt.jpeg",
+      "description": "Green T-shirt inspired by Gon Freecss's outfit.",
+      "category": "Clothes",
+      "inStock": true,
+      "sizes": ["S", "M", "L"],
+      "anime": "Hunter x Hunter"
+    },
+    {
+      "id": 13,
+      "name": "Sailor Moon Luna Plush",
+      "price": 32.99,
+      "image": "/assets/luna-plush.webp",
+      "description": "Cute and soft plush toy of Luna from Sailor Moon.",
+      "category": "Figures",
+      "inStock": true,
+      "dimensions": "25cm x 15cm x 20cm",
+      "anime": "Sailor Moon"
+    },
+    {
+      "id": 14,
+      "name": "Bleach Ichigo Kurosaki Bankai Hoodie",
+      "price": 59.99,
+      "image": "/assets/ichigo-hoodie.webp",
+      "description": "Black hoodie featuring Ichigo's Bankai form.",
+      "category": "Hoodies",
+      "inStock": true,
+      "sizes": ["M", "L", "XL", "XXL"],
+      "anime": "Bleach"
+    },
+    {
+      "id": 15,
+      "name": "Evangelion Unit-01 Figure",
+      "price": 149.99,
+      "image": "/assets/eva-01-figure.webp",
+      "description": "Highly detailed model figure of Evangelion Unit-01.",
+      "category": "Figures",
+      "inStock": true,
+      "dimensions": "30cm x 20cm x 15cm",
+      "anime": "Neon Genesis Evangelion"
+    },
+    {
+      "id": 16,
+      "name": "Cowboy Bebop Spike Spiegel T-Shirt",
+      "price": 30.99,
+      "image": "/assets/spike-tshirt.avif",
+      "description": "Stylish T-shirt featuring Spike Spiegel.",
+      "category": "Clothes",
+      "inStock": true,
+      "sizes": ["S", "M", "L", "XL"],
+      "anime": "Cowboy Bebop"
+    },
+    {
+      "id": 17,
+      "name": "Studio Ghibli Totoro Beanie",
+      "price": 24.99,
+      "image": "/assets/totoro-beanie.jpg",
+      "description": "Warm beanie hat with Totoro design.",
+      "category": "Accessories",
+      "inStock": true,
+      "sizes": ["One Size"],
+      "anime": "My Neighbor Totoro"
+    },
+    {
+      "id": 18,
+      "name": "One Punch Man Saitama Figure",
+      "price": 79.99,
+      "image": "/assets/saitama-figure.webp",
+      "description": "Action figure of Saitama in his hero suit.",
+      "category": "Figures",
+      "inStock": false,
+      "dimensions": "22cm x 10cm x 10cm",
+      "anime": "One Punch Man"
+    },
+    {
+      "id": 19,
+      "name": "Fairy Tail Natsu Dragneel Scarf",
+      "price": 35.99,
+      "image": "/assets/natsu-scarf.jpg",
+      "description": "Replica of Natsu Dragneel's signature checkered scarf.",
+      "category": "Accessories",
+      "inStock": true,
+      "dimensions": "180cm x 30cm",
+      "anime": "Fairy Tail"
+    },
+    {
+      "id": 20,
+      "name": "Tokyo Ghoul Kaneki Ken Hoodie",
+      "price": 55.99,
+      "image": "/assets/kaneki-hoodie.jpeg",
+      "description": "Hoodie featuring Kaneki Ken's mask design.",
+      "category": "Hoodies",
+      "inStock": true,
+      "sizes": ["S", "M", "L", "XL"],
+      "anime": "Tokyo Ghoul"
+    }
+  ]
+}
