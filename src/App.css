@@ -57,9 +57,9 @@
 }
 
 nav {
-  background-color: #1f1f1f;
+  background-color: #f8f9fa;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,7 +68,7 @@ nav {
 nav .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #e0e0e0;
+  color: #343a40;
 }
 
 nav ul {
@@ -78,24 +78,25 @@ nav ul {
 }
 
 nav ul li a {
-  color: #e0e0e0;
+  color: #343a40; 
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-  color: #bb86fc;
+  color: #007bff; 
 }
 
 main {
   flex-grow: 1;
   padding: 2rem;
+  background-color: #ffffff; 
 }
 
 footer {
-  background-color: #1f1f1f;
-  color: #a0a0a0;
+  background-color: #f8f9fa;
+  color: #6c757d;
   text-align: center;
   padding: 1rem;
   margin-top: auto;
