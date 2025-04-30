@@ -1,8 +1,13 @@
-import { useState } from 'react'
+import React, { useState } from 'react';
+import PaymentPortal from './PaymentPortal';
 import '../styles/Cart.css'
+import { Link } from 'react-router-dom';
 
-function Cart({ items, setCartItems }) {
-  const [selectedItems, setSelectedItems] = useState(new Set())
+function Cart({ items, setCartItems, selectedItems, setSelectedItems }) {
+  const [showPayment, setShowPayment] = useState(false)
+
+  // Remove the local selectedItems state since it's now passed as a prop
+  // const [selectedItems, setSelectedItems] = useState(new Set())
 
   const toggleItemSelection = (index) => {
     const newSelected = new Set(selectedItems)
@@ -31,10 +36,27 @@ function Cart({ items, setCartItems }) {
   }
 
   const handleCheckout = () => {
-    // Filter only selected items
     const checkoutItems = items.filter((_, index) => selectedItems.has(index))
-    console.log('Proceeding to checkout with items:', checkoutItems)
-    // You can add your checkout logic here
+    if (checkoutItems.length > 0) {
+      setShowPayment(true)
+    }
+  }
+
+  const handlePaymentComplete = () => {
+    // Remove purchased items from cart
+    const newItems = items.filter((_, index) => !selectedItems.has(index))
+    setCartItems(newItems)
+    setSelectedItems(new Set())
+    setShowPayment(false)
+  }
+
+  if (showPayment) {
+    return (
+      <PaymentPortal 
+        total={calculateTotal()} 
+        onPaymentComplete={handlePaymentComplete}
+      />
+    )
   }
 
   return (
@@ -44,7 +66,7 @@ function Cart({ items, setCartItems }) {
         <div className="empty-cart">
           <i className="fas fa-shopping-cart"></i>
           <p>Your cart is empty</p>
-          <a href="/products" className="continue-shopping">Continue Shopping</a>
+          <Link to="/products" className="continue-shopping">Continue Shopping</Link>
         </div>
       ) : (
         <div className="cart-content">

@@ -7,9 +7,14 @@ import Products from './components/Products'
 import ProductDetails from './components/ProductDetails'
 import Contact from './components/Contact'
 import Cart from './components/Cart'
+import Footer from './components/Footer';
 
 function App() {
-  const [cartItems, setCartItems] = useState([])
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCart = localStorage.getItem('cartItems')
+    return savedCart ? JSON.parse(savedCart) : []
+  })
+  const [selectedCartItems, setSelectedCartItems] = useState(new Set())
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
@@ -31,8 +36,14 @@ function App() {
       })
   }, [])
 
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems))
+  }, [cartItems])
+
   const addToCart = (product) => {
-    setCartItems([...cartItems, product])
+    const updatedCart = [...cartItems, product]
+    setCartItems(updatedCart)
+    localStorage.setItem('cartItems', JSON.stringify(updatedCart))
     console.log(`Added ${product.name} to cart`)
   }
 
@@ -46,19 +57,43 @@ function App() {
 
   return (
     <Router>
-      <Navbar 
-        cartItems={cartItems}
-        isMenuOpen={isMenuOpen}
-        toggleMenu={toggleMenu}
-      />
+      <div className="app">
+        <Navbar 
+          cartItems={cartItems}
+          isMenuOpen={isMenuOpen}
+          toggleMenu={toggleMenu}
+        />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products products={products} addToCart={addToCart} />} />
-        <Route path="/products/:id" element={<ProductDetails products={products} addToCart={addToCart} />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart items={cartItems} setCartItems={setCartItems} />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products products={products} addToCart={addToCart} />} />
+          <Route 
+            path="/products/:id" 
+            element={
+              <ProductDetails 
+                products={products} 
+                addToCart={addToCart} 
+                cartItems={cartItems}
+                setSelectedItems={setSelectedCartItems}
+              />
+            } 
+          />
+          <Route path="/contact" element={<Contact />} />
+          <Route 
+            path="/cart" 
+            element={
+              <Cart 
+                items={cartItems} 
+                setCartItems={setCartItems}
+                selectedItems={selectedCartItems}
+                setSelectedItems={setSelectedCartItems}
+              />
+            } 
+          />
+        </Routes>
+
+        <Footer />
+      </div>
     </Router>
   )
 }

@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useState } from 'react' 
 import '../styles/ProductDetails.css'
 
-function ProductDetails({ products, addToCart }) {
+function ProductDetails({ products, addToCart, cartItems, setSelectedItems }) {
   const { id } = useParams()
   const product = products.find(p => p.id === parseInt(id))
   const [selectedSize, setSelectedSize] = useState('')
@@ -12,7 +12,15 @@ function ProductDetails({ products, addToCart }) {
   }
 
   const handleBuyNow = () => {
-    addToCart(product)
+    if (product.sizes && !selectedSize) {
+      alert('Please select a size')
+      return
+    }
+    const productWithSize = { ...product, selectedSize }
+    addToCart(productWithSize)
+    // Navigate to cart and automatically select the newly added item
+    const cartIndex = cartItems.length  // This will be the index of the new item
+    setSelectedItems(new Set([cartIndex]))
     window.location.href = '/cart'
   }
 
